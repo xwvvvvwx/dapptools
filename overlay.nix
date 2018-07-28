@@ -114,6 +114,8 @@ in {
   token = callPackage (import ./src/token) {};
   dai = callPackage (import ./submodules/dai-cli) {};
 
+  pijul = (callPackage (import ./nix/pijul.nix) {}).pijul {};
+
   go-ethereum = super.go-ethereum.overrideDerivation (_: rec {
     name = "go-ethereum-${version}";
     version = "1.8.10";

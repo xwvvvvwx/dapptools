@@ -31,6 +31,7 @@ let
     inherit go-ethereum-unlimited;
     inherit go-ethereum;
     inherit hevm;
+    inherit pijul;
     inherit qrtx-term;
     inherit qrtx;
     inherit seth;
