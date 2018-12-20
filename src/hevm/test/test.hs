@@ -61,7 +61,7 @@ main = defaultMain $ testGroup "hevm"
           s = "0x1542b6457e91098682138856165381453b3d0acae2470286fd8c8a09914b1b5d"
         in SolidityCall
              (Text.unlines
-               [ "bytes32 h = keccak256(\"\\x19Ethereum Signed Message:\\n32\", d);"
+               [ "bytes32 h = keccak256(abi.encodePacked(\"\\x19Ethereum Signed Message:\\n32\", d));"
                , "x = ecrecover(h, a, b, c);"
                ])
              [ AbiUInt 8 28
