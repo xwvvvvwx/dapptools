@@ -76,7 +76,7 @@ in {
     test-hevm = import ./nix/dapp/dapp-test-hevm.nix { pkgs = self.pkgs; };
   };
 
-  solc = self.callPackage ((import ./nix/solc/versions.nix).solc_0_4_24) {};
+  solc = self.callPackage ((import ./nix/solc/versions.nix).solc_0_5_0) {};
   solc-versions =
     super.lib.mapAttrs
       (_: value: self.callPackage value {})
